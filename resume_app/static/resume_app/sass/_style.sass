@@ -1,0 +1,146 @@
+$font-cursive: 'Pacifico', cursive
+$font-cursive-upper: 'Amatic SC', cursive
+$font-cursive-lower: 'Shadows Into Light', cursive
+$font-serif: 'Quando', serif
+$font-sans-serif: 'Cabin Condensed', sans-serif
+$background-color: #333
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+=rotate($val: -2deg)
+  -webkit-transform: rotate($val)
+  -moz-transform: rotate($val)
+  -ms-transform: rotate($val)
+  -o-transform: rotate($val)
+  transform: rotate($val)
+a
+  color: gray
+a:hover
+  color: lightgray
+
+h4
+  font-family: $font-cursive-lower
+  font-size: 2em
+  font-weight: 100
+  color: lightgray
+
+.front-page
+  height: 50vw
+  background-size: 105vw
+  background-repeat: no-repeat
+  background-position: -10 -280
+  background-image: url('https://hd.unsplash.com/photo-1472417583565-62e7bdeda490')
+
+.btn-logout
+  margin-top: 5%
+  color: #ccc
+
+.btn-logout:hover
+  color: #d9534f
+
+.front-form
+  margin-top: 5%
+
+input
+  opacity: 0.3
+
+.panel-footer
+  font-size: 0.7em
+
+.front-text, .front-text-index
+  font-family: $font-cursive
+  text-align: center
+  color: white
+  p, h2
+    display: inline
+  p
+    font-size: 4em
+    font-family: $font-cursive-upper
+  h2
+    font-size: 6em
+  margin-top: 10vw
+  +rotate(-5deg)
+
+.front-text-index
+  margin-top: 2vw
+
+body
+  background-color: $background-color
+
+.navbar
+  +border-radius(0)
+
+.navbar-brand, .brand
+  font-family: $font-cursive
+  font-size: 2em
+
+.btn-success
+  +border-radius(0)
+
+.btn-account
+  height: 40px
+  background-color: transparent
+  +border-radius(0)
+  color: gray
+
+.btn-account:hover
+  color: lightgray
+
+.dropdown-menu-right
+  +border-radius(0)
+
+.register-button
+  margin-top: 10px !important
+
+.form-label
+  color: gray
+
+.brand-login
+  margin-top: 25%
+  margin-bottom: 30px
+
+.error_message
+  color: red
+
+.sign-in-btn, .register-button, input, select, textarea
+  margin: -7px
+  line-height: inherit
+  +border-radius(0)
+  width: 100%
+  height: 50px
+  font-size: 1em
+  padding-left: 10px
+  border-color: transparent
+
+
+.index-group h3
+  display: inline
+  font-family: $font-sans-serif
+
+.bd-example
+  display: inline
+
+.btn-sm
+  margin-bottom: 15px
+
+table
+  font-family: $font-sans-serif
+
+.fa-plus-square-o
+  color: gray
+
+.fa-plus-square-o:hover
+  color: lightgray
+
+.table-title
+  margin-bottom: 1.5em
+  margin-top: 3em
+  padding-left: 1.5em
+
+.education-card
+  border-left-width: 8px
+  border-color: red

@@ -1,0 +1,199 @@
+{% extends 'resume_app/base.html' %}
+
+{% block navbar %}
+{% include 'resume_app/navbar.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="jumbotron jumbotron-fluid front-page">
+    <div class="front-text-index">
+      <h2>Welcome&nbsp;</h2>
+      <p class="text-uppercase">{{ name }},</p>
+      <h4>let's get you a nicely designed resume</h4>
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="steps col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION SECTION -->
+
+<div class="row index-group">
+<div class="container  col-md-2"></div>
+<div class="card education-card col-md-8">
+  <div class="row table-title">
+
+  <h3>Education&nbsp;</h3>
+    <div id="educationCreateModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="educationCreateModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="educationCreateModalLabel">Education</h3>
+          </div>
+            {% include 'resume_app/education_form.html' %}
+        </div>
+      </div>
+    </div>
+    <div class="bd-example bd-example-padded-bottom">
+      <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#educationCreateModal">
+        <span class="fa fa-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+    <table class="table table-hover">
+      <tbody>
+        {% for education in education_list %}
+        <tr>
+          <th scope="row">{{ forloop.counter}}</th>
+          <td>{{ education.field }}</td>
+          <td>{{ education.degree }}</td>
+          <td>{{ education.school }}</td>
+          <div id="EditModal_{{ education.pk }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="EditModal_{{ education.pk }}_Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="EditModal_{{ education.pk }}_Label">Education: {{ education.field }}, {{ education.school }}</h3>
+                </div>
+                  {% include 'resume_app/education_update_form.html' %}
+              </div>
+            </div>
+          </div>
+
+        <td>
+            <div class="bd-example bd-example-padded-bottom">
+              <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#EditModal_{{ education.pk }}">
+              <span class="fa fa-pencil" aria-hidden="true"></span>
+            </button>&nbsp;&nbsp;&nbsp;&nbsp;
+           </div>
+
+           <a href="{% url 'resume_app:delete_education' education.id %}">
+             <button class="btn btn-outline-danger btn-sm">
+                <span class="fa fa-trash-o" aria-hidden="true"></span>
+            </button>
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="container col-md-2"></div>
+</div>
+
+<!-- EXPERIENCE SECTION -->
+
+
+<div class="row index-group">
+<div class="container  col-md-2"></div>
+<div class="card experience-card col-md-8">
+  <div class="row table-title">
+  <h3>Experience&nbsp;</h3>
+    <div id="experienceCreateModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="experienceCreateModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="experienceCreateModalLabel">Experience</h3>
+          </div>
+            {% include 'resume_app/experience_form.html' %}
+        </div>
+      </div>
+    </div>
+    <div class="bd-example bd-example-padded-bottom">
+      <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#experienceCreateModal">
+        <span class="fa fa-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+    <table class="table table-hover">
+      <tbody>
+        {% for experience in experience_list %}
+        <tr>
+          <th scope="row">{{ forloop.counter}}</th>
+          <td>{{ experience.job_title }}</td>
+          <td>{{ experience.company }}</td>
+          <div id="EditModal_{{ experience.pk }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="EditModal_{{ experience.pk }}_Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="modal-title" id="EditModal_{{ experience.pk }}_Label">Experience: {{ experience.field }}, {{ experience.school }}</h3>
+                </div>
+                  {% include 'resume_app/experience_update_form.html' %}
+              </div>
+            </div>
+          </div>
+
+        <td>
+            <div class="bd-example bd-example-padded-bottom">
+              <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#EditModal_{{ experience.pk }}">
+              <span class="fa fa-pencil" aria-hidden="true"></span>
+            </button>&nbsp;&nbsp;&nbsp;&nbsp;
+           </div>
+
+           <a href="{% url 'resume_app:delete_experience' experience.id %}">
+             <button class="btn btn-outline-danger btn-sm">
+                <span class="fa fa-trash-o" aria-hidden="true"></span>
+            </button>
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="container col-md-2"></div>
+</div>
+
+
+<!-- PROJECTS SECTION -->
+
+<div class="row index-group">
+<div class="container col-md-2"></div>
+<div class="card col-md-8">
+  <div class="row table-title">
+    <h3>Projects&nbsp;</h3>
+    <a href="#">
+      <span class="fa fa-plus-square-o fa-2x" aria-hidden="true"></span>
+    </a>
+  </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Project</th>
+          <th>Short Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for project in project_list %}
+        <tr>
+          <th scope="row">{{ forloop.counter}}</th>
+          <td>{{ project.project_title }}</td>
+          <td>{{ project.description }}</td>
+          <td><span class="fa fa-external-link" aria-hidden="true"></span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="container col-md-2"></div>
+</div>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+
+{% endblock %}

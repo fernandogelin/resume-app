@@ -1,0 +1,47 @@
+{% extends 'resume_app/base.html' %}
+
+  {% block content %}
+<div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron jumbotron-fluid front-page">
+        <div class="front-text">
+          <h2>Design&nbsp;</h2>
+          <p class="text-uppercase">your new carrer path with&nbsp;</p>
+          <h2>Ceevee</h2>
+        </div>
+       <div class="row front-form">
+           <div class="col-sm-4">
+           </div>
+           <div class="col-sm-4">
+               <div class="panel panel-default">
+                   <div class="panel-body">
+                     <div class="row">
+                       {% if error_message %}
+                           <p class="error_message"><strong>{{ error_message }}</strong></p>
+                       {% endif %}
+                     </div>
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      {% include 'resume_app/form_template.html' %}
+                       <div class="row">
+                         <div class="form-group col-sm-12">
+                                <button type="submit" class="register-button btn btn-secondary">
+                                 REGISTER
+                               </button>
+                         </div>
+                       </div>
+                    </form>
+                   </div>
+                   <div class="panel-footer">
+                       Already have an account? <a href="{% url 'resume_app:login_user' %}">Click here</a> to login.
+                   </div>
+               </div>
+           </div>
+           <div class="col-sm-4">
+           </div>
+       </div>
+     </div>
+   </div>
+  </div>
+
+   {% endblock %}

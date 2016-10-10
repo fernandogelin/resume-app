@@ -1,0 +1,56 @@
+{% extends 'resume_app/base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron jumbotron-fluid front-page">
+        <div class="front-text">
+          <h2>Design&nbsp;</h2>
+          <p class="text-uppercase">your new carrer path with&nbsp;</p>
+          <h2>Ceevee</h2>
+        </div>
+        <div class="row front-form">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                      <div class="row">
+                        {% if error_message %}
+                            <p class="error_message"><strong>{{ error_message }}</strong></p>
+                        {% endif %}
+                      </div>
+                      <div class="row">
+                        <form class="form-horizontal" role="form" action="{% url 'resume_app:login_user'%}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                  <input id="id_username" maxlength="30" name="username" placeholder="username" type="text">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group">
+                                  <input id="id_password" maxlength="30" name="password" placeholder="password" type="password">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group">
+                                  <button type="submit" class="btn btn-secondary sign-in-btn">SIGN IN</button>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer pull-right">
+                        Don't have an account? <a href="{% url 'resume_app:register' %}">Click here</a> to register.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+
+      </div>
+
+
+</div>
+
+{% endblock %}
