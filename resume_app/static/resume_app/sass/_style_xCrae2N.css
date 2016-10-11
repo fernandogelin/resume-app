@@ -60,7 +60,7 @@ input {
   margin-top: 2vw; }
 
 body {
-  background-color: rgba(67, 255, 250, 0.55); }
+  background-color: #333; }
 
 .navbar {
   -webkit-border-radius: 0;
@@ -154,29 +154,10 @@ table {
   border-color: rgba(0, 0, 0, 0.5); }
 
 .skill-card {
-  border-left-width: 8px;
-  border-color: rgba(132, 193, 38, 0.5);
-  padding: 0.8rem;
-  width: 22.5%; }
+  padding: 0.5rem; }
   .skill-card h2 {
     font-family: "Cabin Condensed", sans-serif;
     font-size: 1.3rem;
-    display: inline; }
-  .skill-card .btn {
-    width: 1.5rem;
-    padding: 0.3rem;
-    display: inline;
-    margin-top: 1rem;
-    margin-left: 0.2rem; }
-  .skill-card input, .skill-card select {
-    width: 30%;
-    height: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    font-family: "Anonymous Pro", monospace;
-    font-size: 0.7em;
-    opacity: 0.4;
-    margin-left: 0.2rem; }
-  .skill-card form {
     display: inline; }
 
 .skill-tag {
@@ -184,12 +165,9 @@ table {
   color: black;
   padding: 0.4rem; }
   .skill-tag span {
-    color: rgba(0, 0, 0, 0.1); }
+    color: rgba(217, 83, 62, 0.7); }
   .skill-tag span:hover {
     color: #d9533e; }
-
-.col-md-1 {
-  width: 1rem; }
 
 .personal-info {
   font-family: "Anonymous Pro", monospace;
@@ -224,7 +202,7 @@ table {
     opacity: 0.4; }
 
 .modal-header {
-  background-color: rgba(67, 255, 250, 0.55);
+  background-color: #333;
   color: white; }
 
 .close {

@@ -1,16 +1,35 @@
-from .models import Education, Experience, Project
+from .models import Education, Experience, Project, Personal, Skill
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic.edit import UpdateView
-from .forms import UserForm, EducationForm, ExperienceForm
+from .forms import UserForm, EducationForm, ExperienceForm, ProjectForm, PersonalForm, SkillForm
 
 
 def create_context(request):
     education_list = Education.objects.filter(user=request.user)
     experience_list = Experience.objects.filter(user=request.user)
     project_list = Project.objects.filter(user=request.user)
-    education_form = EducationForm(request.POST or None)
-    experience_form = ExperienceForm(request.POST or None)
+    personal = Personal.objects.get(user=request.user)
+    skill_list = Skill.objects.filter(user=request.user)
+
+    education_form = EducationForm(None)
+    experience_form = ExperienceForm(None)
+    project_form = ProjectForm(None)
+    skill_form = SkillForm(None)
+
+    personal_initial_data = {
+        'name': personal.name,
+        'title': personal.title,
+        'job_title': personal.job_title,
+        'email': personal.email,
+        'location': personal.location,
+        'summary': personal.summary,
+        'phone': personal.phone,
+        'website': personal.website,
+        'linkedin': personal.linkedin,
+        'github': personal.github
+    }
+    personal_form = PersonalForm(initial=personal_initial_data)
 
     education_forms = {}
     for education in education_list:
@@ -39,15 +58,37 @@ def create_context(request):
                 }
         experience_forms[experience.id] = ExperienceForm(initial=data)
 
+    project_forms = {}
+    for project in project_list:
+        data = {'title': project.title,
+                'description': project.description,
+                'link': project.link,
+                'github_link': project.github_link,
+                'start_date': experience.start_date,
+                'end_date': experience.end_date
+                }
+        project_forms[project.id] = ProjectForm(initial=data)
+
     context = {'education_list': education_list,
                'experience_list': experience_list,
                'project_list': project_list,
                'name': request.user.first_name,
                'education_form': education_form,
                'education_forms': education_forms,
+
                'experience_form': experience_form,
                'experience_forms': experience_forms,
-               'sections': ['education', 'experience']
+
+               'project_form': project_form,
+               'project_forms': project_forms,
+
+               'personal_form': personal_form,
+               'personal': personal,
+
+               'skills': skill_list,
+               'skill_form': skill_form,
+
+               'sections': ['education', 'experience', 'project']
                }
     return context
 
@@ -84,6 +125,13 @@ def register(request):
         email = form.cleaned_data['email']
         user.set_password(password)
         user.save()
+
+        personal = Personal()
+        personal.user = user
+        personal.name = username
+        personal.email = email
+        personal.save()
+
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
@@ -133,7 +181,8 @@ def delete_education(request, education_id):
     context = create_context(request)
     return render(request, 'resume_app/index.html', context)
 
-#Experience functions
+# Experience functions
+
 def experience_create(request):
     if not request.user.is_authenticated():
         return render(request, 'resume_app/login.html')
@@ -161,6 +210,75 @@ class ExperienceUpdate(UpdateView):
 def delete_experience(request, experience_id):
     experience = Experience.objects.get(pk=experience_id)
     experience.delete()
+
+    context = create_context(request)
+    return render(request, 'resume_app/index.html', context)
+
+
+# Project functions
+
+def project_create(request):
+    if not request.user.is_authenticated():
+        return render(request, 'resume_app/login.html')
+    else:
+        form = ProjectForm(request.POST or None)
+
+        if form.is_valid():
+            project = form.save(commit=False)
+            project.user = request.user
+            project.save()
+
+            context = create_context(request)
+            return render(request, 'resume_app/index.html', context)
+
+        context = {
+            "project_form": form,
+        }
+        return render(request, 'resume_app/project_form.html', context)
+
+class ProjectUpdate(UpdateView):
+    model = Project
+    fields = ['title', 'description', 'link', 'github_link', 'start_date', 'end_date']
+    template_name_suffix = '_update_form'
+
+def delete_project(request, project_id):
+    project = Experience.objects.get(pk=project_id)
+    project.delete()
+
+    context = create_context(request)
+    return render(request, 'resume_app/index.html', context)
+
+class PersonalUpdate(UpdateView):
+    model = Personal
+    fields = ['name', 'title', 'job_title', 'email', 'location', 'phone', 'website', 'linkedin', 'github']
+    template_name_suffix = '_update_form'
+
+
+# Skill functions
+
+def skill_create(request):
+    if not request.user.is_authenticated():
+        return render(request, 'resume_app/login.html')
+    else:
+        form = SkillForm(request.POST or None)
+
+        if form.is_valid():
+            skill = form.save(commit=False)
+            skill.user = request.user
+            skill.save()
+
+            context = create_context(request)
+            return render(request, 'resume_app/index.html', context)
+
+        context = {
+            "skill_form": form,
+        }
+        return render(request, 'resume_app/skill_form.html', context)
+
+
+def delete_skill(request, skill_id):
+    skill = Skill.objects.get(pk=skill_id)
+    skill.delete()
 
     context = create_context(request)
     return render(request, 'resume_app/index.html', context)

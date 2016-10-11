@@ -5,8 +5,8 @@
                <div class="panel panel-default">
                    <div class="panel-body">
                      <div class="modal-body">
-                       <form class="form-horizontal" action="{% url 'resume_app:add_experience' %}" method="post" enctype="multipart/form-data">
-                           {% for field in experience_form %}
+                       <form class="form-horizontal" action="{% url 'resume_app:add_skill' %}" method="post" enctype="multipart/form-data">
+                           {% for field in skill_form %}
                            {% csrf_token %}
                            <div class="row">
                                <div class="form-group">

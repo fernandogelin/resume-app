@@ -3,12 +3,13 @@ $font-cursive-upper: 'Amatic SC', cursive
 $font-cursive-lower: 'Shadows Into Light', cursive
 $font-serif: 'Quando', serif
 $font-sans-serif: 'Cabin Condensed', sans-serif
-$background-color: #333
+$font-monospace: 'Anonymous Pro', monospace;
+$background-color: rgba(67, 255, 250, 0.55)
+$border-left-width: 8px
 
 =border-radius($radius)
   -webkit-border-radius: $radius
   -moz-border-radius:    $radius
-  -ms-border-radius:     $radius
   border-radius:         $radius
 
 =rotate($val: -2deg)
@@ -20,13 +21,19 @@ $background-color: #333
 a
   color: gray
 a:hover
-  color: lightgray
+  color: black
 
 h4
   font-family: $font-cursive-lower
   font-size: 2em
   font-weight: 100
   color: lightgray
+
+h5
+  font-family: $font-sans-serif
+  color: gray
+  margin-top: 10px
+
 
 .front-page
   height: 50vw
@@ -77,9 +84,6 @@ body
 .navbar-brand, .brand
   font-family: $font-cursive
   font-size: 2em
-
-.btn-success
-  +border-radius(0)
 
 .btn-account
   height: 40px
@@ -142,5 +146,124 @@ table
   padding-left: 1.5em
 
 .education-card
-  border-left-width: 8px
-  border-color: red
+  border-left-width: $border-left-width
+  border-color: rgba(217, 83, 62, 0.7)
+
+.experience-card
+  border-left-width: $border-left-width
+  border-color: rgba(2, 117, 216, 0.7)
+
+.project-card
+  border-left-width: $border-left-width
+  border-color: rgba(92, 184, 92, 0.7)
+
+.personal-card
+  padding: 1rem
+  border-left-width: $border-left-width
+  border-color: rgba(0, 0, 0, 0.5)
+
+
+.skill-card
+  border-left-width: $border-left-width
+  border-color: rgba(132, 193, 38, 0.5)
+  padding: 0.8rem
+  width: 22.5%
+  h2
+    font-family: $font-sans-serif
+    font-size: 1.3rem
+    display: inline
+
+  .btn
+    width: 1.5rem
+    padding: 0.3rem
+    display: inline
+    margin-top: 1rem
+    margin-left: 0.2rem
+  input, select
+    width: 30%
+    height: 1.5rem
+    background-color: rgba(0, 0, 0, 0.2)
+    font-family: $font-monospace
+    font-size: 0.7em
+    opacity: 0.4
+    margin-left: 0.2rem
+  form
+    display: inline
+
+
+.skill-tag
+  background-color: rgba(0, 0, 0, 0.2)
+  color: black
+  padding: 0.4rem
+  span
+    color: rgba(0, 0, 0, 0.1)
+  span:hover
+    color: rgba(217, 83, 62, 1)
+
+.col-md-1
+  width: 1rem
+
+
+.personal-info
+  font-family: $font-monospace
+  font-size: 0.7rem
+
+.name-title
+  h3
+    font-size: 2em
+  p
+    font-family: $font-sans-serif
+
+.btn-edit-profile
+  width: 100%
+
+.fa-cogs
+  font-size: 11em
+  color: lightgray
+  
+.resume-preview
+  text-align: center
+
+.btn-form
+  width: 100%
+
+.modal
+  font-family: $font-sans-serif
+  color: black
+
+  input, textarea
+    background-color: rgba(0, 0, 0, 0.2)
+    font-family: $font-monospace
+    font-size: 1em
+    opacity: 0.4
+
+.modal-header
+  background-color: $background-color
+  color: white
+
+.close
+  color: white
+
+.close:hover
+  color: white
+
+.table td, .table th
+    padding: 0
+    padding-left: 0.75rem;
+    vertical-align: middle
+    border-top: 1px solid #eceeef
+
+.btn-primary, .btn-danger
+  margin-top: 0.75rem
+
+.edit-delete
+  margin-right: 2rem
+
+.btn-edit-profile
+  margin-top: 0
+
+th
+  padding-left: 2rem
+
+
+

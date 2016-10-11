@@ -6,9 +6,9 @@
                <div class="panel panel-default">
                    <div class="panel-body">
                      <div class="modal-body">
-                       <form class="form-horizontal" action="{% url 'resume_app:update_education' education.pk %}" method="post" enctype="multipart/form-data">
-                          {% for key, value in education_forms.items %}
-                            {% if education.id == key %}
+                       <form class="form-horizontal" action="{% url 'resume_app:update_project' project.pk %}" method="post" enctype="multipart/form-data">
+                          {% for key, value in project_forms.items %}
+                            {% if project.id == key %}
                                {% for field in value %}
                                {% csrf_token %}
                                <div class="row">
