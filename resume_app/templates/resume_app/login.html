@@ -13,37 +13,36 @@
             <div class="col-sm-4">
             </div>
             <div class="col-sm-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
+                    <div class="panel-body-front card">
                       <div class="row">
                         {% if error_message %}
                             <p class="error_message"><strong>{{ error_message }}</strong></p>
                         {% endif %}
                       </div>
-                      <div class="row">
+
                         <form class="form-horizontal" role="form" action="{% url 'resume_app:login_user'%}" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <div class="form-group">
+                            <div class="row">
+                            <div class="form-group form-login">
                                   <input id="id_username" maxlength="30" name="username" placeholder="username" type="text">
                             </div>
                           </div>
                           <div class="row">
-                            <div class="form-group">
+                            <div class="form-group form-login">
                                   <input id="id_password" maxlength="30" name="password" placeholder="password" type="password">
                             </div>
                           </div>
                           <div class="row">
                             <div class="form-group">
-                                  <button type="submit" class="btn btn-secondary sign-in-btn">SIGN IN</button>
+                                  <button type="submit" class="btn btn-info sign-in-btn">SIGN IN</button>
                             </div>
                           </div>
                         </form>
+                        <div class="panel-footer row">
+                            Don't have an account? <a href="{% url 'resume_app:register' %}">Click here</a> to register.
+                        </div>
                     </div>
-                    <div class="panel-footer pull-right">
-                        Don't have an account? <a href="{% url 'resume_app:register' %}">Click here</a> to register.
-                    </div>
-                </div>
-            </div>
+
             <div class="col-sm-4">
             </div>
         </div>

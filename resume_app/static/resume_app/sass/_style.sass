@@ -60,11 +60,18 @@ h5
 .front-form
   margin-top: 5%
 
-input
-  opacity: 0.3
+.panel-body-front
+  background-color: white
+  padding-top: 1.5rem
+  border-left-width: $border-left-width
+  border-color: #5bc0de
+
 
 .panel-footer
   font-size: 0.7em
+  margin-left: 11rem
+  margin-bottom: 10px
+  color: gray
 
 .jumbotron-index
   height: 34vw
@@ -133,15 +140,20 @@ body
   color: red
 
 .sign-in-btn, .register-button, input, select, textarea
-  margin: -7px
+  margin-left: 2rem
   line-height: inherit
-  +border-radius(0)
-  width: 100%
-  height: 50px
+  width: 85%
+  height: 60px
   font-size: 1em
   padding-left: 10px
-  border-color: transparent
 
+input, select, textarea
+  border-color: transparent
+  background-color: rgba(2, 117, 216, 0.05)
+
+
+.form-login
+  margin-top: -12px
 
 .index-group h3
   display: inline
@@ -242,7 +254,7 @@ table
 .fa-cogs
   font-size: 11em
   color: lightgray
-  
+
 .resume-preview
   text-align: center
 
@@ -320,4 +332,3 @@ th
   -o-transform-origin: 0 0
   -webkit-transform-origin: 0 0
   transform-origin: 0 0
-
