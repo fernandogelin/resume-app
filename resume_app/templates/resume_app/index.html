@@ -5,22 +5,75 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="jumbotron jumbotron-fluid jumbotron-index">
 <div class="row">
-  <div class="jumbotron jumbotron-fluid front-page">
-    <div class="front-text-index">
+      <div class="col-md-2"></div>
+
+      <div class="front-text-index col-md-8">
       <h2>Welcome&nbsp;</h2>
-      <p class="text-uppercase">{{ name }},</p>
+      <p class="text-uppercase">{{ personal.name }},</p>
       <h4>let's get you a nicely designed resume</h4>
     </div>
-    <div class="col-sm-4">
-    </div>
-    <div class="steps col-sm-4">
-    </div>
-    <div class="col-sm-4">
+    <div class="col-md-2"></div>
+</div>
+
+<div class="row generate">
+    <div class="col-md-3"></div>
+<div class="col-md-6">
+    <h4>Just complete your info below and &nbsp;</h4>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#themesModal">
+Ceevee it
+</button>
+
+
+
+
+        <!-- Modal -->
+<div class="modal fade" id="themesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body row">
+
+        <div class="frame-wrap col-md-3">
+            <button class="btn btn-info select-theme">
+             <span class="fa-check fa"></span>
+         </button>
+        <iframe class="card frame" src="http://www.fernandogelin.com/resume/resume.html">
+        </iframe>
+        </div>
+
+          <div class="frame-wrap col-md-3">
+            <button class="btn btn-info select-theme">
+             <span class="fa-check fa"></span>
+         </button>
+        <iframe class="card frame" src="http://www.fernandogelin.com/resume/resume.html">
+        </iframe>
+        </div>
+
+          <div class="frame-wrap col-md-3">
+            <button class="btn btn-info select-theme">
+             <span class="fa-check fa"></span>
+         </button>
+        <iframe class="card frame" src="http://www.fernandogelin.com/resume/resume.html">
+        </iframe>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
+
+
+</div>
+       <div class="col-md-3">
+    </div>
+    </div>
+
+
+
+</div>
+
 
 
 
@@ -111,71 +164,6 @@
 </div>
 
 
-<!-- EDUCATION SECTION -->
-
-<div class="row index-group">
-<div class="container  col-md-2"></div>
-<div class="card education-card col-md-8">
-  <div class="row table-title">
-
-  <h3>Education&nbsp;</h3>
-    <div id="educationCreateModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="educationCreateModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times" aria-hidden="true"></span></button>
-            <h3 class="modal-title" id="educationCreateModalLabel">New Education</h3>
-          </div>
-            {% include 'resume_app/education_form.html' %}
-        </div>
-      </div>
-    </div>
-    <div class="bd-example bd-example-padded-bottom">
-      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#educationCreateModal">
-        <span class="fa fa-plus" aria-hidden="true"></span>
-      </button>
-    </div>
-  </div>
-
-    <table class="table table-hover">
-      <tbody>
-        {% for education in education_list %}
-        <tr>
-          <th scope="row"></th>
-          <td>{{ education.field }}, {{ education.degree }}</td>
-          <td>{{ education.school }}</td>
-          <td>{{ education.city }}, {{ education.state }}</td>
-          <div id="EditModal_education_{{ education.pk }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="EditModal_education_{{ education.pk }}_Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times" aria-hidden="true"></span></button>
-                  <h3 class="modal-title" id="EditModal_education_{{ education.pk }}_Label">Education - {{ education.field }}, {{ education.school }}</h3>
-                </div>
-                  {% include 'resume_app/education_update_form.html' %}
-              </div>
-            </div>
-          </div>
-
-        <td class="pull-right edit-delete">
-              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal_education_{{ education.pk }}">
-              <span class="fa fa-pencil" aria-hidden="true"></span>
-            </button>&nbsp;&nbsp;&nbsp;&nbsp;
-
-           <a href="{% url 'resume_app:delete_education' education.id %}">
-             <button class="btn btn-danger btn-sm">
-                <span class="fa fa-trash-o" aria-hidden="true"></span>
-            </button>
-          </a>
-        </td>
-      </tr>
-      {% endfor %}
-      </tbody>
-    </table>
-  </div>
-  <div class="container col-md-4"></div>
-</div>
-
 <!-- EXPERIENCE SECTION -->
 
 
@@ -206,7 +194,6 @@
       <tbody>
         {% for experience in experience_list %}
         <tr>
-          <th scope="row"></th>
           <td>{{ experience.job_title }}</td>
           <td>{{ experience.company }}</td>
             <td>{{ experience.description|truncatechars:70 }}</td>
@@ -225,7 +212,7 @@
         <td class="pull-right edit-delete">
               <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal_experience_{{ experience.pk }}">
               <span class="fa fa-pencil" aria-hidden="true"></span>
-            </button>&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
 
            <a href="{% url 'resume_app:delete_experience' experience.id %}">
              <button class="btn btn-danger btn-sm">
@@ -272,7 +259,6 @@
       <tbody>
         {% for project in project_list %}
         <tr>
-          <th scope="row"></th>
           <td>{{ project.title }}</td>
           <td>{{ project.description|truncatechars:70 }}</td>
             <td><a href="{{  project.link }}" <span class="fa fa-laptop" aria-hidden="true"></span> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -292,7 +278,7 @@
         <td class="pull-right edit-delete">
               <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal_project_{{ project.pk }}">
               <span class="fa fa-pencil" aria-hidden="true"></span>
-            </button>&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
 
            <a href="{% url 'resume_app:delete_project' project.id %}">
              <button class="btn btn-danger btn-sm">
@@ -308,6 +294,112 @@
   <div class="container col-md-2"></div>
 </div>
 
+<!-- EDUCATION SECTION -->
+
+<div class="row index-group">
+<div class="container  col-md-2"></div>
+<div class="card education-card col-md-8">
+  <div class="row table-title">
+
+  <h3>Education&nbsp;</h3>
+    <div id="educationCreateModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="educationCreateModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times" aria-hidden="true"></span></button>
+            <h3 class="modal-title" id="educationCreateModalLabel">New Education</h3>
+          </div>
+            {% include 'resume_app/education_form.html' %}
+        </div>
+      </div>
+    </div>
+      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#educationCreateModal">
+        <span class="fa fa-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+
+<div class="col-md-6">
+    <table class="table table-hover">
+        <h5>Traditional ed.</h5>
+      <tbody>
+        {% for education in education_list %}
+        {% if education.type == 'Traditional' %}
+        <tr>
+          <td>{{ education.subject }}, {{ education.level|truncatechars:3 }}</td>
+          <td>{{ education.institution }}</td>
+          <div id="EditModal_education_{{ education.pk }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="EditModal_education_{{ education.pk }}_Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times" aria-hidden="true"></span></button>
+                  <h3 class="modal-title" id="EditModal_education_{{ education.pk }}_Label">Education - {{ education.subject }}, {{ education.institution }}</h3>
+                </div>
+                  {% include 'resume_app/education_update_form.html' %}
+              </div>
+            </div>
+          </div>
+
+        <td class="pull-right edit-delete">
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal_education_{{ education.pk }}">
+              <span class="fa fa-pencil" aria-hidden="true"></span>
+            </button>
+
+           <a href="{% url 'resume_app:delete_education' education.id %}">
+             <button class="btn btn-danger btn-sm">
+                <span class="fa fa-trash-o" aria-hidden="true"></span>
+            </button>
+          </a>
+        </td>
+      </tr>
+          {% endif %}
+    {% endfor %}
+      </tbody>
+    </table>
+
+    </div>
+      <div class="container col-md-6">
+      <table class="table table-hover">
+          <h5>Modern ed.</h5>
+          <tbody>
+        {% for education in education_list %}
+        {% if education.type == 'Modern' %}
+        <tr>
+          <td>{{ education.subject }}, {{ education.level|truncatechars:3 }}</td>
+          <td>{{ education.institution }}</td>
+          <div id="EditModal_education_{{ education.pk }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="EditModal_education_{{ education.pk }}_Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times" aria-hidden="true"></span></button>
+                  <h3 class="modal-title" id="EditModal_education_{{ education.pk }}_Label">Education - {{ education.subject }}, {{ education.institution }}</h3>
+                </div>
+                  {% include 'resume_app/education_update_form.html' %}
+              </div>
+            </div>
+          </div>
+
+        <td class="pull-right edit-delete">
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#EditModal_education_{{ education.pk }}">
+              <span class="fa fa-pencil" aria-hidden="true"></span>
+            </button>
+
+           <a href="{% url 'resume_app:delete_education' education.id %}">
+             <button class="btn btn-danger btn-sm">
+                <span class="fa fa-trash-o" aria-hidden="true"></span>
+            </button>
+          </a>
+        </td>
+      </tr>
+          {% endif %}
+    {% endfor %}
+      </tbody>
+    </table>
+
+
+  </div>
+
+  </div>
+</div>
 
 {% if error_message %}
     <p><strong>{{ error_message }}</strong></p>

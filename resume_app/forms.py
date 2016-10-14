@@ -14,7 +14,7 @@ class UserForm(forms.ModelForm):
 class EducationForm(forms.ModelForm):
     class Meta:
         model = Education
-        fields = ['field', 'school', 'degree', 'city', 'state', 'country', 'start_date', 'end_date', 'GPA']
+        fields = ['type', 'subject', 'institution', 'level', 'city', 'state', 'country', 'start_date', 'end_date', 'GPA']
 
 class ExperienceForm(forms.ModelForm):
     class Meta:

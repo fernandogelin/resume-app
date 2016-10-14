@@ -4,7 +4,7 @@ $font-cursive-lower: 'Shadows Into Light', cursive
 $font-serif: 'Quando', serif
 $font-sans-serif: 'Cabin Condensed', sans-serif
 $font-monospace: 'Anonymous Pro', monospace;
-$background-color: rgba(67, 255, 250, 0.55)
+$background-color: #d8d8d8
 $border-left-width: 8px
 
 =border-radius($radius)
@@ -18,6 +18,14 @@ $border-left-width: 8px
   -ms-transform: rotate($val)
   -o-transform: rotate($val)
   transform: rotate($val)
+
+=scale($val: 0.25)
+  -ms-transform: scale($val)
+  -moz-transform: scale($val)
+  -o-transform: scale($val)
+  -webkit-transform: scale(0$val)
+  transform: scale($val)
+
 a
   color: gray
 a:hover
@@ -58,6 +66,20 @@ input
 .panel-footer
   font-size: 0.7em
 
+.jumbotron-index
+  height: 34vw
+
+.btn-lg
+  font-family: $font-cursive
+  font-size: 2rem
+
+.generate
+  text-align: center
+  margin-top: 5rem
+  h4
+    display: inline
+    vertical-align: middle
+
 .front-text, .front-text-index
   font-family: $font-cursive
   text-align: center
@@ -69,7 +91,6 @@ input
     font-family: $font-cursive-upper
   h2
     font-size: 6em
-  margin-top: 10vw
   +rotate(-5deg)
 
 .front-text-index
@@ -77,6 +98,7 @@ input
 
 body
   background-color: $background-color
+
 
 .navbar
   +border-radius(0)
@@ -200,7 +222,7 @@ table
   span:hover
     color: rgba(217, 83, 62, 1)
 
-.col-md-1
+.col-md-gap
   width: 1rem
 
 
@@ -238,7 +260,7 @@ table
     opacity: 0.4
 
 .modal-header
-  background-color: $background-color
+  background-color: #5d5d5d
   color: white
 
 .close
@@ -265,5 +287,35 @@ table
 th
   padding-left: 2rem
 
+.frame-wrap
+  width: 41%;
+  height: 43%;
+  border: 0;
+  padding: 0.25rem;
+  background-color: #cccccc
+  text-align: right
+
+.frame
+  +border-radius(2)
+  width: 70rem
+  height: 90rem
+
+  +scale(0.2)
+
+  -ms-transform-origin: 0 0
+  -moz-transform-origin: 0 0
+  -o-transform-origin: 0 0
+  -webkit-transform-origin: 0 0
+  transform-origin: 0 0
+
+.select-theme
+  z-index: 2
+  position: absolute
+  margin-left: -50%;
+
+.modal-content
+  background: #cccccc
+  width: 150%
+  margin-left: -8rem;
 
 

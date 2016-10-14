@@ -10,7 +10,7 @@ def create_context(request):
     experience_list = Experience.objects.filter(user=request.user)
     project_list = Project.objects.filter(user=request.user)
     personal = Personal.objects.get(user=request.user)
-    skill_list = Skill.objects.filter(user=request.user)
+    skill_list = Skill.objects.filter(user=request.user).order_by('category')
 
     education_form = EducationForm(None)
     experience_form = ExperienceForm(None)
@@ -33,9 +33,9 @@ def create_context(request):
 
     education_forms = {}
     for education in education_list:
-        data = {'field': education.field,
-                'school': education.school,
-                'degree': education.degree,
+        data = {'subject': education.subject,
+                'institution': education.institution,
+                'level': education.level,
                 'city': education.city,
                 'state': education.state,
                 'country': education.country,
@@ -171,8 +171,9 @@ def education_create(request):
 
 class EducationUpdate(UpdateView):
     model = Education
-    fields = ['field', 'school', 'degree', 'city', 'state', 'country', 'start_date', 'end_date', 'GPA']
+    fields = ['subject', 'institution', 'level', 'city', 'state', 'country', 'start_date', 'end_date', 'GPA']
     template_name_suffix = '_update_form'
+    required_css_class = 'required'
 
 def delete_education(request, education_id):
     education = Education.objects.get(pk=education_id)
@@ -282,3 +283,11 @@ def delete_skill(request, skill_id):
 
     context = create_context(request)
     return render(request, 'resume_app/index.html', context)
+
+
+def generate_resume(request, theme):
+    if not request.user.is_authenticated():
+        return render(request, 'resume_app/login.html')
+    else:
+        context = create_context(request)
+    return render(request, 'resume_app/themes/%s.html' % theme, context)

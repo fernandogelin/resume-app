@@ -38,11 +38,24 @@ input {
 .panel-footer {
   font-size: 0.7em; }
 
+.jumbotron-index {
+  height: 34vw; }
+
+.btn-lg {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem; }
+
+.generate {
+  text-align: center;
+  margin-top: 5rem; }
+  .generate h4 {
+    display: inline;
+    vertical-align: middle; }
+
 .front-text, .front-text-index {
   font-family: "Pacifico", cursive;
   text-align: center;
   color: white;
-  margin-top: 10vw;
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
@@ -60,7 +73,7 @@ input {
   margin-top: 2vw; }
 
 body {
-  background-color: rgba(67, 255, 250, 0.55); }
+  background-color: #d8d8d8; }
 
 .navbar {
   -webkit-border-radius: 0;
@@ -188,7 +201,7 @@ table {
   .skill-tag span:hover {
     color: #d9533e; }
 
-.col-md-1 {
+.col-md-gap {
   width: 1rem; }
 
 .personal-info {
@@ -224,7 +237,7 @@ table {
     opacity: 0.4; }
 
 .modal-header {
-  background-color: rgba(67, 255, 250, 0.55);
+  background-color: #5d5d5d;
   color: white; }
 
 .close {
@@ -250,5 +263,40 @@ table {
 
 th {
   padding-left: 2rem; }
+
+.frame-wrap {
+  width: 41%;
+  height: 43%;
+  border: 0;
+  padding: 0.25rem;
+  background-color: #cccccc;
+  text-align: right; }
+
+.frame {
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2;
+  width: 70rem;
+  height: 90rem;
+  -ms-transform: scale(0.2);
+  -moz-transform: scale(0.2);
+  -o-transform: scale(0.2);
+  -webkit-transform: scale(0 0.2);
+  transform: scale(0.2);
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+.select-theme {
+  z-index: 2;
+  position: absolute;
+  margin-left: -50%; }
+
+.modal-content {
+  background: #cccccc;
+  width: 150%;
+  margin-left: -8rem; }
 
 /*# sourceMappingURL=../../../../../../../../../static/resume_app/sass/_style.css.map */

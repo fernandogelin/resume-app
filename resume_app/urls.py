@@ -73,7 +73,13 @@ urlpatterns = [
     url(r'^skill/add/$', views.skill_create, name="add_skill"),
 
     # /resume/skill/2/delete
-    url(r'^project/(?P<skill_id>[0-9]+)/delete_skill/$', views.delete_skill,
-        name="delete_skill"),
+    url(r'^project/(?P<skill_id>[0-9]+)/delete_skill/$', views.delete_skill, name="delete_skill"),
+
+
+    # resume themes urls
+
+    url(r'^(?P<theme>)/', views.generate_resume, name="generate")
 
 ]
+
+
