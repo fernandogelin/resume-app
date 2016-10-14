@@ -264,20 +264,31 @@ table {
 th {
   padding-left: 2rem; }
 
+.modal-themes {
+  background-color: #cccccc; }
+
 .frame-wrap {
-  width: 41%;
-  height: 43%;
+  width: 12.7vw;
+  height: 17vw;
   border: 0;
   padding: 0.25rem;
-  background-color: #cccccc;
-  text-align: right; }
+  background-color: #cccccc; }
+  .frame-wrap a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    z-index: 5;
+    width: 13.5vw;
+    height: 17vw;
+    background-color: #cccccc;
+    opacity: 0.4; }
+  .frame-wrap a:hover {
+    background-color: transparent; }
 
 .frame {
-  -webkit-border-radius: 2;
-  -moz-border-radius: 2;
-  border-radius: 2;
-  width: 70rem;
-  height: 90rem;
+  height: 82vw;
+  width: 60vw;
   -ms-transform: scale(0.2);
   -moz-transform: scale(0.2);
   -o-transform: scale(0.2);
@@ -288,15 +299,5 @@ th {
   -o-transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0; }
-
-.select-theme {
-  z-index: 2;
-  position: absolute;
-  margin-left: -50%; }
-
-.modal-content {
-  background: #cccccc;
-  width: 150%;
-  margin-left: -8rem; }
 
 /*# sourceMappingURL=../../../../../../../../../static/resume_app/sass/_style.css.map */

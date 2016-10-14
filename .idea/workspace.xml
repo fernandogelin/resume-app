@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="73585fbc-aa10-4cbb-8535-6da16b88842f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/forms.py" afterPath="$PROJECT_DIR$/resume_app/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/models.py" afterPath="$PROJECT_DIR$/resume_app/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume/settings.py" afterPath="$PROJECT_DIR$/resume/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume/wsgi.py" afterPath="$PROJECT_DIR$/resume/wsgi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.css" afterPath="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.css.map" afterPath="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.sass" afterPath="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/templates/resume_app/base.html" afterPath="$PROJECT_DIR$/resume_app/templates/resume_app/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/templates/resume_app/index.html" afterPath="$PROJECT_DIR$/resume_app/templates/resume_app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/urls.py" afterPath="$PROJECT_DIR$/resume_app/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume_app/views.py" afterPath="$PROJECT_DIR$/resume_app/views.py" />
     </list>
     <ignored path="resume.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,94 +32,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resume_app/templates/resume_app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-              <folding>
-                <element signature="e#605#611#0" expanded="true" />
-                <element signature="e#3041#3047#0" expanded="true" />
-                <element signature="e#3047#3053#0" expanded="true" />
-                <element signature="e#3215#3221#0" expanded="true" />
-                <element signature="e#3221#3227#0" expanded="true" />
-                <element signature="e#3388#3394#0" expanded="true" />
-                <element signature="e#3394#3400#0" expanded="true" />
-                <element signature="e#3572#3578#0" expanded="true" />
-                <element signature="e#3578#3584#0" expanded="true" />
-                <element signature="e#3748#3754#0" expanded="true" />
-                <element signature="e#3754#3760#0" expanded="true" />
-                <element signature="e#4693#4699#0" expanded="true" />
-                <element signature="e#4981#4987#0" expanded="true" />
-                <element signature="e#9443#9449#0" expanded="true" />
-                <element signature="e#9449#9455#0" expanded="true" />
-                <element signature="e#9455#9461#0" expanded="true" />
-                <element signature="e#9461#9467#0" expanded="true" />
-                <element signature="e#9467#9473#0" expanded="true" />
-                <element signature="e#9580#9586#0" expanded="true" />
-                <element signature="e#9586#9592#0" expanded="true" />
-                <element signature="e#9592#9598#0" expanded="true" />
-                <element signature="e#9598#9604#0" expanded="true" />
-                <element signature="e#9604#9610#0" expanded="true" />
-                <element signature="e#9610#9616#0" expanded="true" />
-                <element signature="e#9616#9622#0" expanded="true" />
-                <element signature="e#9622#9628#0" expanded="true" />
-                <element signature="e#9628#9634#0" expanded="true" />
-                <element signature="e#9634#9640#0" expanded="true" />
-                <element signature="e#9640#9646#0" expanded="true" />
-                <element signature="e#9646#9652#0" expanded="true" />
-                <element signature="e#9652#9658#0" expanded="true" />
-                <element signature="e#9658#9664#0" expanded="true" />
-                <element signature="e#9664#9670#0" expanded="true" />
-                <element signature="e#9670#9676#0" expanded="true" />
-                <element signature="e#9676#9682#0" expanded="true" />
-                <element signature="e#9682#9688#0" expanded="true" />
-                <element signature="e#9688#9694#0" expanded="true" />
-                <element signature="e#9694#9700#0" expanded="true" />
-                <element signature="e#11281#11287#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resume_app/templates/resume_app/themes/theme1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resume_app/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resume_app/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_style.sass" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_style.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="313" column="18" selection-start-line="313" selection-start-column="18" selection-end-line="313" selection-end-column="18" />
+            <state relative-caret-position="213">
+              <caret line="308" column="16" selection-start-line="308" selection-start-column="16" selection-end-line="308" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resume/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resume/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <folding>
+                <element signature="e#310#319#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resume/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#223#232#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +93,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/resume/urls.py" />
-        <option value="$PROJECT_DIR$/resume/settings.py" />
         <option value="$PROJECT_DIR$/templates/resume_app/index.html" />
         <option value="$PROJECT_DIR$/resume_app/templates/resume_app/form_template.html" />
         <option value="$PROJECT_DIR$/resume_app/templates/resume_app/registration_form.html" />
@@ -169,8 +117,11 @@
         <option value="$PROJECT_DIR$/resume_app/templates/resume_app/themes/theme1.html" />
         <option value="$PROJECT_DIR$/resume_app/views.py" />
         <option value="$PROJECT_DIR$/resume_app/urls.py" />
-        <option value="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.sass" />
         <option value="$PROJECT_DIR$/resume_app/templates/resume_app/index.html" />
+        <option value="$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.sass" />
+        <option value="$PROJECT_DIR$/resume/Procfile" />
+        <option value="$PROJECT_DIR$/resume/wsgi.py" />
+        <option value="$PROJECT_DIR$/resume/settings.py" />
       </list>
     </option>
   </component>
@@ -245,20 +196,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resume" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resume" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resume" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resume_app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,7 +515,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23036253" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -587,7 +524,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -617,8 +554,13 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/resume_app/forms.py</url>
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/resume/wsgi.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -627,47 +569,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#605#611#0" expanded="true" />
-            <element signature="e#3041#3047#0" expanded="true" />
-            <element signature="e#3047#3053#0" expanded="true" />
-            <element signature="e#3215#3221#0" expanded="true" />
-            <element signature="e#3221#3227#0" expanded="true" />
-            <element signature="e#3388#3394#0" expanded="true" />
-            <element signature="e#3394#3400#0" expanded="true" />
-            <element signature="e#3572#3578#0" expanded="true" />
-            <element signature="e#3578#3584#0" expanded="true" />
-            <element signature="e#3748#3754#0" expanded="true" />
-            <element signature="e#3754#3760#0" expanded="true" />
-            <element signature="e#4693#4699#0" expanded="true" />
-            <element signature="e#4981#4987#0" expanded="true" />
-            <element signature="e#9443#9449#0" expanded="true" />
-            <element signature="e#9449#9455#0" expanded="true" />
-            <element signature="e#9455#9461#0" expanded="true" />
-            <element signature="e#9461#9467#0" expanded="true" />
-            <element signature="e#9467#9473#0" expanded="true" />
-            <element signature="e#9580#9586#0" expanded="true" />
-            <element signature="e#9586#9592#0" expanded="true" />
-            <element signature="e#9592#9598#0" expanded="true" />
-            <element signature="e#9598#9604#0" expanded="true" />
-            <element signature="e#9604#9610#0" expanded="true" />
-            <element signature="e#9610#9616#0" expanded="true" />
-            <element signature="e#9616#9622#0" expanded="true" />
-            <element signature="e#9622#9628#0" expanded="true" />
-            <element signature="e#9628#9634#0" expanded="true" />
-            <element signature="e#9634#9640#0" expanded="true" />
-            <element signature="e#9640#9646#0" expanded="true" />
-            <element signature="e#9646#9652#0" expanded="true" />
-            <element signature="e#9652#9658#0" expanded="true" />
-            <element signature="e#9658#9664#0" expanded="true" />
-            <element signature="e#9664#9670#0" expanded="true" />
-            <element signature="e#9670#9676#0" expanded="true" />
-            <element signature="e#9676#9682#0" expanded="true" />
-            <element signature="e#9682#9688#0" expanded="true" />
-            <element signature="e#9688#9694#0" expanded="true" />
-            <element signature="e#9694#9700#0" expanded="true" />
-            <element signature="e#11281#11287#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -691,47 +593,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <element signature="e#605#611#0" expanded="true" />
-            <element signature="e#3041#3047#0" expanded="true" />
-            <element signature="e#3047#3053#0" expanded="true" />
-            <element signature="e#3215#3221#0" expanded="true" />
-            <element signature="e#3221#3227#0" expanded="true" />
-            <element signature="e#3388#3394#0" expanded="true" />
-            <element signature="e#3394#3400#0" expanded="true" />
-            <element signature="e#3572#3578#0" expanded="true" />
-            <element signature="e#3578#3584#0" expanded="true" />
-            <element signature="e#3748#3754#0" expanded="true" />
-            <element signature="e#3754#3760#0" expanded="true" />
-            <element signature="e#4693#4699#0" expanded="true" />
-            <element signature="e#4981#4987#0" expanded="true" />
-            <element signature="e#9443#9449#0" expanded="true" />
-            <element signature="e#9449#9455#0" expanded="true" />
-            <element signature="e#9455#9461#0" expanded="true" />
-            <element signature="e#9461#9467#0" expanded="true" />
-            <element signature="e#9467#9473#0" expanded="true" />
-            <element signature="e#9580#9586#0" expanded="true" />
-            <element signature="e#9586#9592#0" expanded="true" />
-            <element signature="e#9592#9598#0" expanded="true" />
-            <element signature="e#9598#9604#0" expanded="true" />
-            <element signature="e#9604#9610#0" expanded="true" />
-            <element signature="e#9610#9616#0" expanded="true" />
-            <element signature="e#9616#9622#0" expanded="true" />
-            <element signature="e#9622#9628#0" expanded="true" />
-            <element signature="e#9628#9634#0" expanded="true" />
-            <element signature="e#9634#9640#0" expanded="true" />
-            <element signature="e#9640#9646#0" expanded="true" />
-            <element signature="e#9646#9652#0" expanded="true" />
-            <element signature="e#9652#9658#0" expanded="true" />
-            <element signature="e#9658#9664#0" expanded="true" />
-            <element signature="e#9664#9670#0" expanded="true" />
-            <element signature="e#9670#9676#0" expanded="true" />
-            <element signature="e#9676#9682#0" expanded="true" />
-            <element signature="e#9682#9688#0" expanded="true" />
-            <element signature="e#9688#9694#0" expanded="true" />
-            <element signature="e#9694#9700#0" expanded="true" />
-            <element signature="e#11281#11287#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -758,9 +620,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -787,7 +647,7 @@
         <state relative-caret-position="15">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -796,9 +656,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -806,21 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resume/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resume/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,7 +802,7 @@
         <state relative-caret-position="240">
           <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -988,16 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resume_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resume_app/templates/resume_app/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1006,10 +839,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resume_app/urls.py">
+    <entry file="file://$PROJECT_DIR$/resume_app/templates/resume_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+        <state relative-caret-position="423">
+          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1022,59 +855,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resume_app/templates/resume_app/index.html">
+    <entry file="file://$PROJECT_DIR$/resume_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="350">
+          <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#605#611#0" expanded="true" />
-            <element signature="e#3041#3047#0" expanded="true" />
-            <element signature="e#3047#3053#0" expanded="true" />
-            <element signature="e#3215#3221#0" expanded="true" />
-            <element signature="e#3221#3227#0" expanded="true" />
-            <element signature="e#3388#3394#0" expanded="true" />
-            <element signature="e#3394#3400#0" expanded="true" />
-            <element signature="e#3572#3578#0" expanded="true" />
-            <element signature="e#3578#3584#0" expanded="true" />
-            <element signature="e#3748#3754#0" expanded="true" />
-            <element signature="e#3754#3760#0" expanded="true" />
-            <element signature="e#4693#4699#0" expanded="true" />
-            <element signature="e#4981#4987#0" expanded="true" />
-            <element signature="e#9443#9449#0" expanded="true" />
-            <element signature="e#9449#9455#0" expanded="true" />
-            <element signature="e#9455#9461#0" expanded="true" />
-            <element signature="e#9461#9467#0" expanded="true" />
-            <element signature="e#9467#9473#0" expanded="true" />
-            <element signature="e#9580#9586#0" expanded="true" />
-            <element signature="e#9586#9592#0" expanded="true" />
-            <element signature="e#9592#9598#0" expanded="true" />
-            <element signature="e#9598#9604#0" expanded="true" />
-            <element signature="e#9604#9610#0" expanded="true" />
-            <element signature="e#9610#9616#0" expanded="true" />
-            <element signature="e#9616#9622#0" expanded="true" />
-            <element signature="e#9622#9628#0" expanded="true" />
-            <element signature="e#9628#9634#0" expanded="true" />
-            <element signature="e#9634#9640#0" expanded="true" />
-            <element signature="e#9640#9646#0" expanded="true" />
-            <element signature="e#9646#9652#0" expanded="true" />
-            <element signature="e#9652#9658#0" expanded="true" />
-            <element signature="e#9658#9664#0" expanded="true" />
-            <element signature="e#9664#9670#0" expanded="true" />
-            <element signature="e#9670#9676#0" expanded="true" />
-            <element signature="e#9676#9682#0" expanded="true" />
-            <element signature="e#9682#9688#0" expanded="true" />
-            <element signature="e#9688#9694#0" expanded="true" />
-            <element signature="e#9694#9700#0" expanded="true" />
-            <element signature="e#11281#11287#0" expanded="true" />
+            <element signature="e#223#232#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resume_app/static/resume_app/sass/_style.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="313" column="18" selection-start-line="313" selection-start-column="18" selection-end-line="313" selection-end-column="18" />
+        <state relative-caret-position="213">
+          <caret line="308" column="16" selection-start-line="308" selection-start-column="16" selection-end-line="308" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#310#319#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

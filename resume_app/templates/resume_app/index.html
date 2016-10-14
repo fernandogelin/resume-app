@@ -6,75 +6,97 @@
 
 {% block content %}
 <div class="jumbotron jumbotron-fluid jumbotron-index">
-<div class="row">
-      <div class="col-md-2"></div>
+  <div class="row">
+    <div class="col-md-2"></div>
 
       <div class="front-text-index col-md-8">
-      <h2>Welcome&nbsp;</h2>
-      <p class="text-uppercase">{{ personal.name }},</p>
-      <h4>let's get you a nicely designed resume</h4>
+        <h2>Welcome&nbsp;</h2>
+        <p class="text-uppercase">{{ personal.name }},</p>
+        <h4>let's get you a nicely designed resume</h4>
     </div>
-    <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
 </div>
 
-<div class="row generate">
+  <div class="row generate">
+
     <div class="col-md-3"></div>
-<div class="col-md-6">
-    <h4>Just complete your info below and &nbsp;</h4>
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#themesModal">
-Ceevee it
-</button>
 
-
-
-
-        <!-- Modal -->
-<div class="modal fade" id="themesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body row">
-
-        <div class="frame-wrap col-md-3">
-            <button class="btn btn-info select-theme">
-             <span class="fa-check fa"></span>
-         </button>
-        <iframe class="card frame" src="http://www.fernandogelin.com/resume/resume.html">
-        </iframe>
-        </div>
-
-          <div class="frame-wrap col-md-3">
-            <button class="btn btn-info select-theme">
-             <span class="fa-check fa"></span>
-         </button>
-        <iframe class="card frame" src="http://www.fernandogelin.com/resume/resume.html">
-        </iframe>
-        </div>
-
-          <div class="frame-wrap col-md-3">
-            <button class="btn btn-info select-theme">
-             <span class="fa-check fa"></span>
-         </button>
-        <iframe class="card frame" src="http://www.fernandogelin.com/resume/resume.html">
-        </iframe>
-        </div>
-
-      </div>
+    <div class="col-md-6">
+      <h4>Just complete your info below and &nbsp;</h4>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#themesModal">
+      Ceevee it
+      </button>
 
     </div>
+
+    <div class="col-md-3"></div>
   </div>
 </div>
 
+<!-- Resume Themes Modal -->
+<div class="modal fade" id="themesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-themes">
+      <div class="modal-body">
 
-</div>
-       <div class="col-md-3">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+              <a href="http://www.fernandogelin.com/resume/resume.html">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+              <a href="http://www.fernandogelin.com/resume/resume.html">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    </div>
-
-
-
+  </div>
 </div>
-
-
 
 
 <!-- PERSONAL SECTION -->
