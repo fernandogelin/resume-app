@@ -26,20 +26,49 @@
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#themesModal">
       Ceevee it
       </button>
-
     </div>
 
     <div class="col-md-3"></div>
   </div>
 </div>
 
+
 <!-- Resume Themes Modal -->
 <div class="modal fade" id="themesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-themes">
-      <div class="modal-body">
+      <div class="modal-body container-fluid">
 
-        <div class="row">
+
+
+          <div class="col-md-4">
+            <div class="frame-wrap">
+
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+              <a href="{% url 'resume_app:generate' 1 %}">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+              <iframe class="frame" src="/resume/themes/1">
+              </iframe>
+              <a href="{% url 'resume_app:generate' 1 %}">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="container frame-wrap">
+              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
+              </iframe>
+            </div>
+          </div>
+
+
+
 
           <div class="col-md-4">
             <div class="container frame-wrap">
@@ -58,45 +87,10 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="container frame-wrap">
-              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
-              </iframe>
-            </div>
-          </div>
         </div>
-
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="container frame-wrap">
-
-              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
-              </iframe>
-              <a href="http://www.fernandogelin.com/resume/resume.html">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="container frame-wrap">
-              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
-              </iframe>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="container frame-wrap">
-              <iframe class="frame" src="http://www.fernandogelin.com/resume/resume.html">
-              </iframe>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
-</div>
 
 
 <!-- PERSONAL SECTION -->

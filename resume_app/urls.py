@@ -78,8 +78,6 @@ urlpatterns = [
 
     # resume themes urls
 
-    url(r'^(?P<theme>)/', views.generate_resume, name="generate")
+    url(r'^themes/(?P<theme_id>[0-9]+)/$', views.generate_resume, name="generate")
 
 ]
-
-

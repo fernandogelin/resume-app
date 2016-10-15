@@ -1,7 +1,49 @@
-{% extends 'resume_app/base.html' %}
+{% extends 'resume_app/themes/theme_base.html' %}
 
-<div>
-    {% for section in sections %}
-    <h1>section</h1>
-    {%  endfor %}
+{% block style %}
+{% load sass_tags %}
+    <link href="{% sass_src 'resume_app/sass/themes/theme1.sass' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-4">
+      <h1>{{ personal.name }}</h1>
+      <h2>{{ personal.job_title}}</h2>
+    </div>
+
+    <div class="col-md-8">
+      <h3>{{ personal.name }}</h3>
+      <p>{{ personal.location }}</p>
+      <p>{{ personal.email }}</p>
+    </div>
+
+  </div>
+
+{% if skills %}
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Skills</h1>
+    </div>
+
+    <div class="col-md-8">
+      {% for category, skills in skill_groups.iteritems %}
+        <div class="col-md-4">
+          </ul>{{ category }}
+          {% for skill in skills %}
+          <li>{{  skill }}</li>
+          {% endfor %}
+        </ul>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+
+{% endif %}
+
+
 </div>
+{% endblock %}

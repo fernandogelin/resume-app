@@ -4,8 +4,18 @@ $font-cursive-lower: 'Shadows Into Light', cursive
 $font-serif: 'Quando', serif
 $font-sans-serif: 'Cabin Condensed', sans-serif
 $font-monospace: 'Anonymous Pro', monospace;
+
+
 $background-color: #d8d8d8
 $border-left-width: 8px
+
+$color-1: rgba(217, 83, 62, 0.7)
+$color-2: rgba(2, 117, 216, 0.7)
+$color-3: rgba(92, 184, 92, 0.7)
+$color-4: #5bc0de
+$color-5: rgba(2, 117, 216, 0.05)
+$color-6: rgba(132, 193, 38, 0.5)
+
 
 =border-radius($radius)
   -webkit-border-radius: $radius
@@ -64,7 +74,7 @@ h5
   background-color: white
   padding-top: 1.5rem
   border-left-width: $border-left-width
-  border-color: #5bc0de
+  border-color: $color-4
 
 
 .panel-footer
@@ -75,6 +85,7 @@ h5
 
 .jumbotron-index
   height: 34vw
+  background-color: $color-4
 
 .btn-lg
   font-family: $font-cursive
@@ -149,7 +160,7 @@ body
 
 input, select, textarea
   border-color: transparent
-  background-color: rgba(2, 117, 216, 0.05)
+  background-color: $color-5
 
 
 .form-login
@@ -181,25 +192,25 @@ table
 
 .education-card
   border-left-width: $border-left-width
-  border-color: rgba(217, 83, 62, 0.7)
+  border-color: $color-1
 
 .experience-card
   border-left-width: $border-left-width
-  border-color: rgba(2, 117, 216, 0.7)
+  border-color: $color-2
 
 .project-card
   border-left-width: $border-left-width
-  border-color: rgba(92, 184, 92, 0.7)
+  border-color: $color-3
 
 .personal-card
   padding: 1rem
   border-left-width: $border-left-width
-  border-color: rgba(0, 0, 0, 0.5)
+  border-color: $color-4
 
 
 .skill-card
   border-left-width: $border-left-width
-  border-color: rgba(132, 193, 38, 0.5)
+  border-color: $color-6
   padding: 0.8rem
   width: 22.5%
   h2
@@ -261,19 +272,25 @@ table
 .btn-form
   width: 100%
 
+
 .modal
   font-family: $font-sans-serif
   color: black
 
-  input, textarea
-    background-color: rgba(0, 0, 0, 0.2)
+  input, textarea, select
+    background-color: transparent
+    color: gray
     font-family: $font-monospace
     font-size: 1em
-    opacity: 0.4
+    margin-top: -13px
+    border: $color-4 solid 1px
+    +border-radius(4px)
+
 
 .modal-header
-  background-color: #5d5d5d
+  background-color: $color-2
   color: white
+  border-radius: inherit
 
 .close
   color: white

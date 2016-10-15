@@ -5,12 +5,22 @@ from django.views.generic.edit import UpdateView
 from .forms import UserForm, EducationForm, ExperienceForm, ProjectForm, PersonalForm, SkillForm
 
 
+def skill_by_category(request):
+    skill_list = Skill.objects.filter(user=request.user)
+    categories = [skill.category for skill in skill_list]
+    skill_groups = {}
+    for category in categories:
+        skill_groups[category] = [skill for skill in skill_list if skill.category == category]
+    return skill_groups
+
 def create_context(request):
     education_list = Education.objects.filter(user=request.user)
     experience_list = Experience.objects.filter(user=request.user)
     project_list = Project.objects.filter(user=request.user)
     personal = Personal.objects.get(user=request.user)
     skill_list = Skill.objects.filter(user=request.user).order_by('category')
+
+    skill_groups = skill_by_category(request)
 
     education_form = EducationForm(None)
     experience_form = ExperienceForm(None)
@@ -87,8 +97,7 @@ def create_context(request):
 
                'skills': skill_list,
                'skill_form': skill_form,
-
-               'sections': ['education', 'experience', 'project']
+               'skill_groups': skill_groups,
                }
     return context
 
@@ -285,9 +294,9 @@ def delete_skill(request, skill_id):
     return render(request, 'resume_app/index.html', context)
 
 
-def generate_resume(request, theme):
+def generate_resume(request, theme_id):
     if not request.user.is_authenticated():
         return render(request, 'resume_app/login.html')
     else:
         context = create_context(request)
-    return render(request, 'resume_app/themes/%s.html' % theme, context)
+    return render(request, 'resume_app/themes/theme%s.html' % theme_id, context)
