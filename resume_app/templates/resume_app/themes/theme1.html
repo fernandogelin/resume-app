@@ -2,7 +2,7 @@
 
 {% block style %}
 {% load sass_tags %}
-    <link href="{% sass_src 'resume_app/sass/themes/theme1.sass' %}" rel="stylesheet" type="text/css" />
+    <link href="{% sass_src 'resume_app/sass/themes/theme1.sass' %}" rel="stylesheet" type="text/css" media="print" />
 {% endblock %}
 
 
@@ -10,12 +10,12 @@
 <div class="container">
 
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-xs-4">
       <h1>{{ personal.name }}</h1>
       <h2>{{ personal.job_title}}</h2>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-xs-8">
       <h3>{{ personal.name }}</h3>
       <p>{{ personal.location }}</p>
       <p>{{ personal.email }}</p>
@@ -25,13 +25,13 @@
 
 {% if skills %}
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-xs-4">
       <h1>Skills</h1>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-xs-8">
       {% for category, skills in skill_groups.iteritems %}
-        <div class="col-md-4">
+        <div class="col-xs-4">
           </ul>{{ category }}
           {% for skill in skills %}
           <li>{{  skill }}</li>
@@ -41,9 +41,54 @@
         {% endfor %}
     </div>
   </div>
+{% endif %}
 
+{% if experience_list %}
+<div class="row">
+  <div class="col-xs-4">
+    <h1>Experience</h1>
+  </div>
+
+  <div class="col-xs-8">
+    {% for experience in experience_list %}
+    <h2><b>{{ experience.job_title }}</b> / {{ experience.company }}</h2>
+    <p>{{ experience.start_date }} - {{ experience.end_date}}</p>
+    <p>{{ experience.description }}</p>
+{% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if project_list %}
+<div class="projects">
+  <div class="col-xs-4">
+    <h1>Projects</h1>
+  </div>
+
+  <div class="col-xs-8">
+    {% for project in project_list %}
+    <h2><b>{{ project.title }}</b></h2>
+    <p>{{ project.start_date }} - {{ project.end_date}}</p>
+    <p>{{ project.description }}</p>
+{% endfor %}
+  </div>
+</div>
 {% endif %}
 
 
+{% if education_list %}
+<div class="projects">
+  <div class="col-xs-4">
+    <h1>Education</h1>
+  </div>
+
+  <div class="col-xs-8">
+    {% for education in education_list %}
+    <h2><b>{{ education.subject }}, {{ education.degree}} </b> / {{ education.institution }}</h2>
+    <p>{{ education.start_date }} - {{ education.end_date}}</p>
+{% endfor %}
+  </div>
 </div>
+{% endif %}
+
 {% endblock %}
